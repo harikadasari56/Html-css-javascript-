@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+
+    #calculator {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #result {
+        grid-column: span 3;
+        width: 85%;
+        height: 50px;
+        font-size: 18px;
+        text-align: right;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        outline: none;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 60px;
+        height: 50px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    #clear {
+        background-color: #ff6666;
+        color: white;
+    }
+
+    .operator {
+        background-color: #ffcc00;
+        color: #333;
+    }
+
+    .number {
+        background-color: #e6e6e6;
+        color: #333;
+    }
+
+    #answer {
+        background-color: #4caf50;
+        color: white;
+        grid-column: span 3;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <textarea id="result" placeholder="0" readonly></textarea>
+        <button class="number">0</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+
+        <button class="operator">%</button>
+        <button class="operator">/</button>
+
+        <button class="operator">*</button>
+
+        <button class="operator">-</button>
+
+        <button class="operator">+</button>
+        <button id="clear">AC</button>
+
+        <button id="answer">=</button>
+    </div>
+    <script src="cals.js"></script>
+</body>
+</html>
